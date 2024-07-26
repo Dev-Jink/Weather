@@ -10,7 +10,7 @@ import SnapKit
 
 class CityWeatherCell: UITableViewCell {
     static let cellId = "CityWeatherCell"
-    // Define the labels
+    
     let cityName: UILabel = {
         let cityName = UILabel()
         cityName.font = UIFont.systemFont(ofSize: 20)
@@ -46,13 +46,13 @@ class CityWeatherCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.selectionStyle = .none
-        // Add the labels to the content view
+        
         contentView.addSubview(cityName)
         contentView.addSubview(temp)
         contentView.addSubview(descriptionLabel)
         contentView.addSubview(tempMaxMin)
         
-        // Apply constraints using SnapKit
+        
         cityName.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(10)
             make.leading.equalToSuperview().offset(10)
